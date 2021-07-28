@@ -1,1 +1,7 @@
-<p>layout works!</p>
+<div class="wrapper default-theme" [ngClass]="getClasses()">
+  <app-navbar></app-navbar>
+  <main>
+    <app-sidebar></app-sidebar>
+    <router-outlet></router-outlet>
+  </main>
+</div>

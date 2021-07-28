@@ -1,0 +1,24 @@
+.container-fluid{
+  width: 100vw;
+  height: 100vh;
+  background-color: #282f48;
+}
+form{
+  background-color: #3d4465;
+}
+
+@media only screen and (min-width: 1220px) {
+  form{
+    width: 35% !important;
+  }
+}
+@media only screen and (max-width: 1220px) {
+  form{
+    width: 50% !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  form{
+    width: 80% !important;
+  }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavService } from "./share/service/navbar/nav.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'THSociety-web';
+
+  constructor(private navService: NavService) {
+  }
 }
