@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxCollapseModule} from "ngx-collapse";
 import {CollapseModule} from 'ngx-bootstrap/collapse';
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     AppRoutingModule,
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

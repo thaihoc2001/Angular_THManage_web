@@ -4,7 +4,7 @@
   background-color: #282f48;
 }
 form{
-  background-color: #3d4465;
+  background-color: #282f48;
 }
 
 @media only screen and (min-width: 1220px) {
@@ -21,4 +21,15 @@ form{
   form{
     width: 80% !important;
   }
+}
+input{
+  background-color: #3d4465;
+  border: 1px solid #3d4465;
+}
+label{
+  color: gray !important;
+}
+button{
+  background-color: #3d4465 !important;
+  border: 1px solid #3d4465;
 }
