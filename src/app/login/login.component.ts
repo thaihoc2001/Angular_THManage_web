@@ -10,6 +10,8 @@ import { TokenStorageService } from "../share/service/auth/token-storage.service
 })
 export class LoginComponent implements OnInit {
   infoUser: any;
+  validateForm: any;
+  size: any;
 
   constructor( private authService: AuthService,
                private tokenStorageService :TokenStorageService,
@@ -17,8 +19,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.infoUser = this.formBuilder.group({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required)
+      username: new FormControl('thaihoc7314', Validators.required),
+      password: new FormControl('123456789', Validators.required)
     })
   }
 
@@ -35,5 +37,9 @@ export class LoginComponent implements OnInit {
   }
   reload(): void{
     window.location.reload()
+  }
+
+  submitForm() {
+
   }
 }

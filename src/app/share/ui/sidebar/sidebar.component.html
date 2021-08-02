@@ -1,4 +1,4 @@
-<aside class="sidebar shadow-sm">
+<aside class="sidebar shadow-sm pt-5 pt-md-0">
   <div class="sidebar-profile d-flex flex-column justify-content-center pt-5 pb-3">
     <div class="picture-wrapper mb-4">
       <div class="user-picture m-auto">
@@ -17,7 +17,7 @@
     <ul class="menu-items list-unstyled">
       <li >
         <a routerLink="/log/logs" routerLinkActive="active">
-          <span>Logs</span>
+          <span>Task</span>
         </a>
       </li>
       <li>
@@ -35,6 +35,21 @@
           <span>Profile</span>
         </a>
       </li>
+      <li >
+        <a routerLink="/home/createStaff" routerLinkActive="active" >
+          <span>Create staff</span>
+        </a>
+      </li>
+      <li >
+        <a routerLink="/home/createManage" routerLinkActive="active" >
+          <span>Create manage</span>
+        </a>
+      </li>
     </ul>
+    <div class="">
+      <button class="row btn btn-danger" (click)="logout()">
+        Logout
+      </button>
+    </div>
   </nav>
 </aside>

@@ -1,42 +1,48 @@
-<div class="container-fluid m-0 p-0">
+<div class="outer container-fluid m-0 p-0">
   <div class="row h-100 justify-content-center align-items-center m-0 p-0">
     <form name="myForm" [formGroup]="infoUser" (ngSubmit)="onSubmit()" class="w-100 p-5">
       <div class="text-center">
-        <h1 class="fw-bold " style="color: gray">ĐĂNG NHẬP</h1>
+        <h1 class="fw-bold text-dark">Login</h1>
       </div>
-      <div class="reg-form form-group ">
-        <label for="username" class="fw-bold text-light">
-          Tài khoản:
-        </label>
-        <input
-          class="form-control"
-          type = "text"
-          name="username"
-          formControlName="username"
-          required
-          placeholder="Username"
-          id="username"
-        >
+      <nz-form-item class="mt-5">
+        <nz-form-control nzErrorTip="Please input your username!">
+          <nz-input-group nzPrefixIcon="user">
+            <input type="text" nz-input formControlName="username" placeholder="Type your u sername" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="password" nz-input formControlName="password" placeholder="Type your password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <div class="mt-3 text-end">
+        <a routerLink="#" class="text-decoration-none" style="color: #666666">Forgot password ?</a>
       </div>
-      <div class="reg-form form-group my-3">
-        <label for="password" class="fw-bold text-light">
-          Mật khẩu:
-        </label>
-        <input
-          class="form-control"
-          type = "password"
-          name="password"
-          formControlName="password"
-          required
-          placeholder="Password"
-          id="password"
-        >
+      <div class="text-center mt-3">
+        <button  type="submit" class="btn btn-light mt-1 fw-bolder">Login</button>
       </div>
-      <div class="text-center">
-        <button  type="submit" class="btn btn-light mt-1 fw-bolder">ĐĂNG NHẬP</button>
-      </div>
-      <div class="mt-3">
-        <a routerLink="#" class="text-decoration-none" style="color: gray">Quên mật khẩu ?</a>
+      <div class="mt-5 text-center">
+        <p class="mt-5">Or Sign Up Using</p>
+        <div class="d-flex justify-content-center mt-4">
+          <div>
+            <a>
+              <i class="fa fa-facebook mx-1" aria-hidden="true" style="background-color: #3b5998;"></i>
+            </a>
+          </div>
+          <div>
+            <a>
+              <i class="fa fa-twitter mx-2" aria-hidden="true" style="background-color: #1da1f2;"></i>
+            </a>
+          </div>
+          <div>
+            <a>
+              <i class="fa fa-google mx-1" aria-hidden="true" style="background-color: #ea4335;"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </form>
   </div>

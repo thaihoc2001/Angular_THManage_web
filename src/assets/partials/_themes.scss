@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 $bg-color:#f2f3f8;
-$navbar-bg-color : #242939;
-$navbar-color:#6e7899;
+$navbar-bg-color : #7277ed;
+$navbar-color:#fff;
 $sidebar-bg-color:#fff;
 $sidebar-color:#3d4465;
 $sidebar-icon-color:#c4cff9;
@@ -29,10 +29,10 @@ body {
 
     .left-nav {
       input.navbar-search {
-        background: #282f48;
-        color:$navbar-color;
+        background: #ffffff;
+        color:#6e7899;
         &::placeholder{
-          color:rgba($navbar-color, .6);
+          color:rgba(#6e7899, .6);
         }
       }
     }
@@ -42,11 +42,10 @@ body {
     }
 
     .nav-link {
-      color: $navbar-color;
+      color: #ffffff;
 
       i {
-        border-color: $navbar-color;
-        background: #282f48;
+        border-color: #ffffff;
       }
 
       &:hover {
@@ -127,7 +126,7 @@ body {
             }
           }
         }
-        
+
       }
     }
   }
