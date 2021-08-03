@@ -4,7 +4,7 @@ import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import * as _ from 'lodash';
 // import {StorageService} from '../storage/storage.service';
-// import {TokenStorageService} from '../auth/token-storage.service';
+import {TokenStorageService} from '../auth/token-storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +12,13 @@ import * as _ from 'lodash';
 export class ApiService {
 
   constructor(private httpClient: HttpClient,
-              // private tokenStorageService: TokenStorageService
+              private tokenStorageService: TokenStorageService
   ) {
   }
 
   public setHeaders(headers?: any): HttpHeaders {
-    // const token = 'Bearer ' + this.tokenStorageService.getToken();
-    const token = '';
+    const token = 'Bearer ' + this.tokenStorageService.getToken();
+    // const token = '';
     let httpHeaders;
 
     if (token) {
@@ -36,8 +36,8 @@ export class ApiService {
     return httpHeaders;
   }
   public setHeadersFormData(headers?: any): HttpHeaders {
-    // const token = 'Bearer ' + this.tokenStorageService.getToken();
-    const token = '';
+    const token = 'Bearer ' + this.tokenStorageService.getToken();
+    // const token = '';
     let httpHeaders;
 
     if (token) {
@@ -55,8 +55,8 @@ export class ApiService {
   }
 
   public setUrlEncodedHeaders(headers?: any): HttpHeaders {
-    // const token = 'Bearer ' + this.storageService.getToken();
-    const token = '';
+    const token = 'Bearer ' + this.tokenStorageService.getToken();
+    // const token = '';
     let httpHeaders;
 
     if (token) {

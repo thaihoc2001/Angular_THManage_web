@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: '',
     component: LoginComponent,
-    canActivate: [AuthGuard],
+    data: {returnUrl: window.location.pathname}
+    // canActivate: [AuthGuard]
   }
 ];
 

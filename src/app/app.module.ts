@@ -16,6 +16,10 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { NotFoundComponent } from './share/ui/not-found/not-found.component';
+import { NzResultModule } from 'ng-zorro-antd/result';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { UpdateInformationUserComponent } from './update-information-user/update-information-user.component';
 
 registerLocaleData(en);
 
@@ -25,7 +29,9 @@ registerLocaleData(en);
     LayoutComponent,
     SidebarComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotFoundComponent,
+    UpdateInformationUserComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,9 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NzResultModule,
+    NzIconModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

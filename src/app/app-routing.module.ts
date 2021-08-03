@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {AuthGuard} from "./share/service/auth/guards/auth.guard";
+import {NotFoundComponent} from "./share/ui/not-found/not-found.component";
+import {UpdateInformationUserComponent} from "./update-information-user/update-information-user.component";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -15,7 +17,16 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren:() => import('./layout/layout.module').then(m => m.LayoutModule),
-    canLoad: [AuthGuard]
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'updateInfo',
+    component: UpdateInformationUserComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

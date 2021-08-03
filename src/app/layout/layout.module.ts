@@ -2,20 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
-import { CreateStaffComponent } from './create-staff/create-staff.component';
-import { CreateManageComponent } from './create-manage/create-manage.component';
 import {ReactiveFormsModule} from "@angular/forms";
-
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 @NgModule({
-  declarations: [
-    CreateStaffComponent,
-    CreateManageComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzTableModule,
+    NzCheckboxModule
   ]
 })
 export class LayoutModule { }

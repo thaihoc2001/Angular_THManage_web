@@ -16,13 +16,21 @@
     </div>
     <ul class="menu-items list-unstyled">
       <li >
-        <a routerLink="/log/logs" routerLinkActive="active">
-          <span>Task</span>
+        <a routerLink="/home/dashboard" routerLinkActive="active">
+          <i nz-icon nzType="dashboard" nzTheme="outline"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li >
+        <a routerLink="/home/employee" routerLinkActive="active">
+          <i nz-icon nzType="usergroup-add" nzTheme="outline"></i>
+          <span>Employee Manager</span>
         </a>
       </li>
       <li>
         <a routerLink="/log/logs-visualization" routerLinkActive="active">
-          <span>Log Visualization</span>
+          <i nz-icon nzType="usergroup-add" nzTheme="outline"></i>
+          <span>Manage</span>
         </a>
       </li>
     </ul>
@@ -32,24 +40,18 @@
     <ul class="menu-items list-unstyled ">
       <li >
         <a routerLink="/profile/detail" routerLinkActive="active" >
+          <i nz-icon nzType="user" nzTheme="outline"></i>
           <span>Profile</span>
         </a>
       </li>
-      <li >
-        <a routerLink="/home/createStaff" routerLinkActive="active" >
-          <span>Create staff</span>
-        </a>
-      </li>
-      <li >
-        <a routerLink="/home/createManage" routerLinkActive="active" >
-          <span>Create manage</span>
+      <li>
+        <a class="">
+          <i nz-icon nzType="logout" nzTheme="outline"></i>
+          <span (click)="logout()">
+            Logout
+          </span>
         </a>
       </li>
     </ul>
-    <div class="">
-      <button class="row btn btn-danger" (click)="logout()">
-        Logout
-      </button>
-    </div>
   </nav>
 </aside>

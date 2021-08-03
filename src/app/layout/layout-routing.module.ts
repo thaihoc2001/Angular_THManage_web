@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {LayoutComponent} from "./layout.component";
-import {CreateStaffComponent} from "./create-staff/create-staff.component";
-import {CreateManageComponent} from "./create-manage/create-manage.component";
 
 const routes: Routes = [
   {
@@ -11,18 +9,19 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo:'dasdboard'
+        redirectTo:'dashboard',
+        pathMatch: 'full'
       },
       {
-        path: 'createStaff',
-        component: CreateStaffComponent
+        path: 'dashboard',
+        loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'createManage',
-        component: CreateManageComponent
+        path: 'employee',
+        loadChildren: () => import('../employee-manager/employee-manager.module').then(m => m.EmployeeManagerModule)
       }
     ]
-  }
+  },
 ];
 
 @NgModule({
